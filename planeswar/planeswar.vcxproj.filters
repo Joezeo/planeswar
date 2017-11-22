@@ -42,37 +42,7 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="small.ico">
-      <Filter>资源文件</Filter>
-    </Image>
     <Image Include="..\..\..\图片\素材\planewar\icon.ico">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="bk.bmp">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="big.bmp">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="exit.bmp">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="gameover.bmp">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="logo.bmp">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="middle.bmp">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="restart.bmp">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="start.bmp">
-      <Filter>资源文件</Filter>
-    </Image>
-    <Image Include="Myico.ico">
       <Filter>资源文件</Filter>
     </Image>
     <Image Include="..\res\small.ico">
@@ -107,9 +77,6 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <None Include="cursor1.cur">
-      <Filter>资源文件</Filter>
-    </None>
     <None Include="..\res\cursor1.cur">
       <Filter>资源文件</Filter>
     </None>
