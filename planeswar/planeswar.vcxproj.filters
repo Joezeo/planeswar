@@ -45,9 +45,6 @@
     <Image Include="small.ico">
       <Filter>资源文件</Filter>
     </Image>
-    <Image Include="planeswar.ico">
-      <Filter>资源文件</Filter>
-    </Image>
     <Image Include="..\..\..\图片\素材\planewar\icon.ico">
       <Filter>资源文件</Filter>
     </Image>
@@ -75,5 +72,46 @@
     <Image Include="start.bmp">
       <Filter>资源文件</Filter>
     </Image>
+    <Image Include="Myico.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\res\small.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\res\Myico.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\res\bk.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\res\big.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\res\exit.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\res\gameover.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\res\logo.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\res\middle.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\res\restart.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\res\start.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cursor1.cur">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\res\cursor1.cur">
+      <Filter>资源文件</Filter>
+    </None>
   </ItemGroup>
 </Project>

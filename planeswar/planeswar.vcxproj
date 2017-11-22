@@ -162,16 +162,30 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\..\..\图片\素材\planewar\icon.ico" />
+    <Image Include="..\res\big.bmp" />
+    <Image Include="..\res\bk.bmp" />
+    <Image Include="..\res\exit.bmp" />
+    <Image Include="..\res\gameover.bmp" />
+    <Image Include="..\res\logo.bmp" />
+    <Image Include="..\res\middle.bmp" />
+    <Image Include="..\res\Myico.ico" />
+    <Image Include="..\res\restart.bmp" />
+    <Image Include="..\res\small.ico" />
+    <Image Include="..\res\start.bmp" />
     <Image Include="big.bmp" />
     <Image Include="bk.bmp" />
     <Image Include="exit.bmp" />
     <Image Include="gameover.bmp" />
     <Image Include="logo.bmp" />
     <Image Include="middle.bmp" />
-    <Image Include="planeswar.ico" />
+    <Image Include="Myico.ico" />
     <Image Include="restart.bmp" />
     <Image Include="small.ico" />
     <Image Include="start.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\res\cursor1.cur" />
+    <None Include="cursor1.cur" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
