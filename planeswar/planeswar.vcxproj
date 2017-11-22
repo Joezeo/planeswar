@@ -161,8 +161,17 @@
     <ResourceCompile Include="planeswar.rc" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="..\..\..\图片\素材\planewar\icon.ico" />
+    <Image Include="big.bmp" />
+    <Image Include="bk.bmp" />
+    <Image Include="exit.bmp" />
+    <Image Include="gameover.bmp" />
+    <Image Include="logo.bmp" />
+    <Image Include="middle.bmp" />
     <Image Include="planeswar.ico" />
+    <Image Include="restart.bmp" />
     <Image Include="small.ico" />
+    <Image Include="start.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
