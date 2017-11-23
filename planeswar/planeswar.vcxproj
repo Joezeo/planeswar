@@ -170,6 +170,7 @@
     <Image Include="..\res\middle.bmp" />
     <Image Include="..\res\Myico.ico" />
     <Image Include="..\res\restart.bmp" />
+    <Image Include="..\res\small.bmp" />
     <Image Include="..\res\small.ico" />
     <Image Include="..\res\start.bmp" />
   </ItemGroup>
