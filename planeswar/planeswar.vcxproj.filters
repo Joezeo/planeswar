@@ -84,4 +84,9 @@
       <Filter>资源文件</Filter>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Media Include="..\res\Crash.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+  </ItemGroup>
 </Project>
