@@ -169,6 +169,7 @@
     <Image Include="..\res\logo.bmp" />
     <Image Include="..\res\middle.bmp" />
     <Image Include="..\res\Myico.ico" />
+    <Image Include="..\res\myplane.bmp" />
     <Image Include="..\res\play.bmp" />
     <Image Include="..\res\restart.bmp" />
     <Image Include="..\res\small.bmp" />
