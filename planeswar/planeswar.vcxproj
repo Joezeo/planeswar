@@ -169,6 +169,7 @@
     <Image Include="..\res\logo.bmp" />
     <Image Include="..\res\middle.bmp" />
     <Image Include="..\res\Myico.ico" />
+    <Image Include="..\res\play.bmp" />
     <Image Include="..\res\restart.bmp" />
     <Image Include="..\res\small.bmp" />
     <Image Include="..\res\small.ico" />
@@ -179,6 +180,9 @@
   </ItemGroup>
   <ItemGroup>
     <Media Include="..\res\Crash.wav" />
+    <Media Include="..\res\oversound.wav" />
+    <Media Include="..\res\runsound.wav" />
+    <Media Include="..\res\welsound.wav" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
