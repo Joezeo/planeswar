@@ -180,6 +180,7 @@
   </ItemGroup>
   <ItemGroup>
     <Media Include="..\res\Crash.wav" />
+    <Media Include="..\res\overs.wav" />
     <Media Include="..\res\oversound.wav" />
     <Media Include="..\res\runsound.wav" />
     <Media Include="..\res\welsound.wav" />

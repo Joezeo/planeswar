@@ -100,5 +100,8 @@
     <Media Include="..\res\welsound.wav">
       <Filter>资源文件</Filter>
     </Media>
+    <Media Include="..\res\overs.wav">
+      <Filter>资源文件</Filter>
+    </Media>
   </ItemGroup>
 </Project>
