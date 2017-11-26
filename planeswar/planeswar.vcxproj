@@ -187,6 +187,7 @@
     <Image Include="..\res\backgroud\bg8.bmp" />
     <Image Include="..\res\backgroud\bg9.bmp" />
     <Image Include="..\res\big.bmp" />
+    <Image Include="..\res\bullet.bmp" />
     <Image Include="..\res\exit.bmp" />
     <Image Include="..\res\gameover.bmp" />
     <Image Include="..\res\logo.bmp" />
