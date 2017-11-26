@@ -168,6 +168,8 @@
     <Image Include="..\res\gameover.bmp" />
     <Image Include="..\res\logo.bmp" />
     <Image Include="..\res\middle.bmp" />
+    <Image Include="..\res\MUSICOFF.bmp" />
+    <Image Include="..\res\MUSICON.bmp" />
     <Image Include="..\res\Myico.ico" />
     <Image Include="..\res\myplane.bmp" />
     <Image Include="..\res\play.bmp" />
