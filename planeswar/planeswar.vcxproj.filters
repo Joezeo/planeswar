@@ -51,9 +51,6 @@
     <Image Include="..\res\Myico.ico">
       <Filter>资源文件</Filter>
     </Image>
-    <Image Include="..\res\bk.bmp">
-      <Filter>资源文件</Filter>
-    </Image>
     <Image Include="..\res\big.bmp">
       <Filter>资源文件</Filter>
     </Image>
@@ -88,6 +85,78 @@
       <Filter>资源文件</Filter>
     </Image>
     <Image Include="..\res\MUSICOFF.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\res\backgroud\bg1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\res\backgroud\bg2.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\res\backgroud\bg3.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\res\backgroud\bg4.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\res\backgroud\bg5.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\res\backgroud\bg6.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\res\backgroud\bg7.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\res\backgroud\bg8.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\res\backgroud\bg9.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\res\backgroud\bg10.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\res\backgroud\bg11.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\res\backgroud\bg12.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\res\backgroud\bg13.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\res\backgroud\bg14.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\res\backgroud\bg15.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\res\backgroud\bg16.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\res\backgroud\bg18.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\res\backgroud\bg19.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\res\backgroud\bg20.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\res\backgroud\bg21.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\res\backgroud\bg22.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\res\backgroud\bg23.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\res\backgroud\bg24.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\res\backgroud\bg25.bmp">
       <Filter>资源文件</Filter>
     </Image>
   </ItemGroup>
