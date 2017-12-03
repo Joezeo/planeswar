@@ -2,7 +2,6 @@
 #include "windows.h"
 #include "resource.h"
 #include "assert.h"
-#include <mmsystem.h>
 #pragma comment(lib,"msimg32.lib")
 #pragma comment(lib,"winmm.lib")
 #ifndef __GAME_H__

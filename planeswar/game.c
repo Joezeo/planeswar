@@ -1,6 +1,5 @@
 #include "game.h"
 #include "stdafx.h"
-#include <stdlib.h>
 int uiBmpName[BMPCOUNT] = {						// 储存位图ID的数组
 	IDB_BG1,		//0
 	IDB_BIG,		//1
@@ -43,11 +42,6 @@ int uiBmpName[BMPCOUNT] = {						// 储存位图ID的数组
 	IDB_BULLET,		//38
 };
 TYPEINFO typeinfo[3];			//三种类型飞机的信息
-
-//	自定义函数
-//
-//  声明在planeswar.h头文件中
-//
 
 /*
 init/free模块：
