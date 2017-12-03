@@ -38,7 +38,7 @@
     <ClCompile Include="planeswar.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="game.c">
+    <ClCompile Include="game.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
