@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="game模块">
+      <UniqueIdentifier>{72f27d94-e2d6-4bf8-9032-424c8dfe3fd0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -28,7 +31,7 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="game.h">
-      <Filter>头文件</Filter>
+      <Filter>game模块</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -39,7 +42,7 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="game.c">
-      <Filter>源文件</Filter>
+      <Filter>game模块</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

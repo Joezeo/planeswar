@@ -1,11 +1,16 @@
-#pragma once
+/**********************************************
+				Editor:Joezeo
+		  E-mail:joezeo@outlook.com
+
+**********************************************/
+#ifndef __GAME_H__
+#define __GAME_H__
+
 #include "windows.h"
 #include "resource.h"
 #include "assert.h"
 #pragma comment(lib,"msimg32.lib")
 #pragma comment(lib,"winmm.lib")
-#ifndef __GAME_H__
-#define __GAME_H__
 
 #ifdef __cplusplus
 extern "C" {
@@ -90,48 +95,109 @@ typedef struct {
 
 
 //init/free:
-VOID		init_items(LPARAM, HWND, HBITMAP**, BULLET_LINK*, MYPLANE**, PLANE**, GAME*, HBITMAP*);//初始化全局变量
-VOID		free_items(HBITMAP*, BULLET_LINK*, MYPLANE*, PLANE*);						//游戏结束时释放资源
-VOID		restart_game(HWND, BULLET_LINK*, MYPLANE*, GAME*);							//重新开始游戏，重设变量
+VOID			//初始化所有变量	
+init_items(LPARAM, HWND, HBITMAP**, BULLET_LINK*, MYPLANE**, PLANE**, GAME*, HBITMAP*);
+
+VOID			//游戏结束时释放资源
+free_items(HBITMAP*, BULLET_LINK*, MYPLANE*, PLANE*);						
+
+static VOID		//重新开始游戏，重设变量
+restart_game(HWND, BULLET_LINK*, MYPLANE*, GAME*);							
+
 
 //scence:
-VOID		draw_senceUI(HDC, HBITMAP*, BULLET_LINK*, MYPLANE*, PLANE*, GAME*, HBITMAP*);	//分场景画出界面
-VOID		draw_background(HDC, HDC, HBITMAP*, BITMAP, GAME*, HBITMAP*);					//画背景
-VOID		draw_senceI(HDC, HDC, HBITMAP*, BITMAP);										//画场景一：WELCOME
-VOID		draw_senceII(HDC, HDC, HBITMAP*, BITMAP, BULLET_LINK*, MYPLANE*, PLANE*, GAME*);//画场景二：RUNING
-VOID		draw_senceIII(HDC, HDC, HBITMAP*, BITMAP, GAME*);								//画场景三：OVER
+VOID			//分场景画出界面	
+draw_senceUI(HDC, HBITMAP*, BULLET_LINK*, MYPLANE*, PLANE*, GAME*, HBITMAP*);	
+
+static VOID		//画背景
+draw_background(HDC, HDC, HBITMAP*, BITMAP, GAME*, HBITMAP*);					
+
+static VOID		//画场景一：WELCOME
+draw_senceI(HDC, HDC, HBITMAP*, BITMAP);										
+
+static VOID		//画场景二：RUNING
+draw_senceII(HDC, HDC, HBITMAP*, BITMAP, BULLET_LINK*, MYPLANE*, PLANE*, GAME*);
+
+static VOID		//画场景三：OVER
+draw_senceIII(HDC, HDC, HBITMAP*, BITMAP, GAME*);								
+
 
 //message event:
-VOID		proc_lButtondown(HWND, LPARAM, BULLET_LINK*, MYPLANE*, GAME*, HBITMAP*);//鼠标左键按下事件
-BOOL		check_button_start(POINT, HBITMAP*);					//检测开始按钮是否被按下
-BOOL		check_button_restart(POINT, HBITMAP*);					//检测重新开始按钮是否被按下
-BOOL		check_button_exit(POINT, HBITMAP*);						//检测退出按钮是否被按下
-BOOL		check_button_pause_play(POINT, HBITMAP*);				//检测暂停/开始按钮是否被按下
-BOOL		check_button_sound_on_off(POINT, HBITMAP*);				//检测音乐开关按钮是否被按下
-VOID		proc_timer(HWND, BULLET_LINK*, MYPLANE*, PLANE*, GAME*, HBITMAP*);//计时器事件
+VOID			//计时器事件	
+proc_timer(HWND, BULLET_LINK*, MYPLANE*, PLANE*, GAME*, HBITMAP*);		
+
+VOID			//鼠标左键按下事件
+proc_lButtondown(HWND, LPARAM, BULLET_LINK*, MYPLANE*, GAME*, HBITMAP*);
+
+static BOOL		//检测开始按钮是否被按下
+check_button_start(POINT, HBITMAP*);					
+
+static BOOL		//检测重新开始按钮是否被按下
+check_button_restart(POINT, HBITMAP*);					
+
+static BOOL		//检测退出按钮是否被按下
+check_button_exit(POINT, HBITMAP*);						
+
+static BOOL		//检测暂停/开始按钮是否被按下
+check_button_pause_play(POINT, HBITMAP*);				
+
+static BOOL		//检测音乐开关按钮是否被按下
+check_button_sound_on_off(POINT, HBITMAP*);				
+
 
 //enime:
-VOID		update_plane_info(BOOL, UINT, PLANE*, GAME*);	//跟新敌机信息
-VOID		check_plane_info(PLANE*, GAME*);				//检查敌机信息
-VOID		check_plane_pos(PLANE*, GAME*);					//检查飞机位置，判断是否有飞机到达屏幕底部，如是，update_plane_info
-VOID		free_planes(PLANE*);							//释放planes资源
+VOID			//跟新敌机信息
+update_plane_info(BOOL, UINT, PLANE*, GAME*);	
+
+static VOID		//检查敌机信息
+check_plane_info(PLANE*, GAME*);				
+
+static VOID		//检查飞机位置，判断是否有飞机到达屏幕底部，如是，update_plane_info
+check_plane_pos(PLANE*, GAME*);					
+
+static VOID		//释放planes资源
+free_planes(PLANE*);							
+
 
 //sound:
-VOID		play_backsound(GAME*);							//播放背景音乐
+VOID			//播放背景音乐
+play_backsound(GAME*);							
+
 
 //control myplane:
-VOID		move_myplane(WPARAM, HWND, MYPLANE*, GAME*);	//移动己方飞机，用上下左右，移动
-BOOL		check_myplane_crash(MYPLANE*, PLANE*, GAME*);	//检查敌机和玩家飞机是否相撞
-VOID		free_myplane(MYPLANE*);							//释放myplane资源
+VOID			//移动己方飞机，用上下左右，移动
+move_myplane(WPARAM, HWND, MYPLANE*, GAME*);	
+
+static BOOL		//检查敌机和玩家飞机是否相撞
+check_myplane_crash(MYPLANE*, PLANE*, GAME*);	
+
+static VOID		//释放myplane资源
+free_myplane(MYPLANE*);							
+
 
 //bullet:
-VOID		create_bullet(BULLET_LINK*, MYPLANE*, HBITMAP*);//生成子弹
-VOID		draw_bullet(BULLET_LINK*, HDC, HDC);			//画出子弹
-VOID		move_bullet(BULLET_LINK*);						//移动子弹
-BULLET*		check_bullet_pos(BULLET_LINK*);					//检查子弹是否出界
-BULLET*		check_bullet_info(BULLET_LINK*, PLANE*, GAME*);	//检查子弹是否击中敌机
-VOID		free_bullet(BULLET_LINK*, BULLET*);				//释放子弹资源
-VOID		free_allBullet(BULLET_LINK*);					//游戏重新开始时，释放所有子弹资源
+static VOID		//生成子弹
+create_bullet(BULLET_LINK*, MYPLANE*, HBITMAP*);
+
+static VOID		//画出子弹
+draw_bullet(BULLET_LINK*, HDC, HDC);			
+
+static VOID		//移动子弹
+move_bullet(BULLET_LINK*);						
+
+static BULLET*	//检查子弹是否出界
+check_bullet_pos(BULLET_LINK*);					
+
+static BULLET*	//检查子弹是否击中敌机
+check_bullet_info(BULLET_LINK*, PLANE*, GAME*);	
+
+static VOID		//释放子弹资源	
+free_bullet(BULLET_LINK*, BULLET*);				
+
+static VOID		//游戏重新开始时，释放所有子弹资源
+free_allBullet(BULLET_LINK*);					
+
+
 #ifdef __cplusplus
 }
 #endif

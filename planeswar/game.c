@@ -1,5 +1,12 @@
+/**********************************************
+				Editor:Joezeo
+		  E-mail:joezeo@outlook.com
+
+**********************************************/
+
 #include "game.h"
 #include "stdafx.h"
+
 int uiBmpName[BMPCOUNT] = {						// ´¢´æÎ»Í¼IDµÄÊý×é
 	IDB_BG1,		//0
 	IDB_BIG,		//1
@@ -110,6 +117,7 @@ init_items(LPARAM lParam, HWND hwnd, HBITMAP **backGrounds, BULLET_LINK *bullet_
 	SendMessage(hwnd, WM_PLAYBACKSOUND, 0, 0);
 
 }
+
 VOID
 free_items(HBITMAP *backGrouds, BULLET_LINK *bullet_link, MYPLANE *myplane, PLANE *planes) {
 	free(backGrouds);
@@ -118,6 +126,7 @@ free_items(HBITMAP *backGrouds, BULLET_LINK *bullet_link, MYPLANE *myplane, PLAN
 	free_planes(planes);
 	free_allBullet(bullet_link);
 }
+
 VOID
 restart_game(HWND hwnd, BULLET_LINK *bullet_link, MYPLANE *myplane, GAME *s_game) {
 	s_game->g_score = 0;
@@ -130,6 +139,7 @@ restart_game(HWND hwnd, BULLET_LINK *bullet_link, MYPLANE *myplane, GAME *s_game
 	free_allBullet(bullet_link);
 	SendMessage(hwnd, NULL, 0, 0);
 }
+
 
 /*
 senceÄ£¿é£º
@@ -173,6 +183,7 @@ draw_senceUI(HDC hdc, HBITMAP *backGrouds, BULLET_LINK *bullet_link,
 	DeleteDC(hdcMem);
 	DeleteDC(hdcTmp);
 }
+
 VOID
 draw_background(HDC hdcMem, HDC hdcTmp, HBITMAP *backGrounds,
 	BITMAP bmp, GAME *s_game, HBITMAP *hbBmp) {// »­±³¾°£¬ÔÚÈý¸ö³¡¾°¶¼ÐèÒª×öµÄÊÂÇé //
@@ -200,6 +211,7 @@ draw_background(HDC hdcMem, HDC hdcTmp, HBITMAP *backGrounds,
 		hdcTmp, 0, 0, bmp.bmWidth, bmp.bmHeight, RGB(255, 255, 255));
 
 }
+
 VOID
 draw_senceI(HDC hdcMem, HDC hdcTmp, HBITMAP *hbBmp, BITMAP bmp) {// »­³¡¾°Ò»£¬°üÀ¨logo£¬¿ªÊ¼°´Å¥ //
 																 //»­logo
@@ -213,6 +225,7 @@ draw_senceI(HDC hdcMem, HDC hdcTmp, HBITMAP *hbBmp, BITMAP bmp) {// »­³¡¾°Ò»£¬°ü
 	TransparentBlt(hdcMem, 125, 380, bmp.bmWidth, bmp.bmHeight,
 		hdcTmp, 0, 0, bmp.bmWidth, bmp.bmHeight, RGB(255, 255, 255));
 }
+
 VOID
 draw_senceII(HDC hdcMem, HDC hdcTmp, HBITMAP *hbBmp,
 	BITMAP bmp, BULLET_LINK *bullet_link, MYPLANE *myplane, PLANE *planes, GAME *s_game) {// »­³¡¾°¶þ£¬°üÀ¨µÐ»ú£¬¼º·½·É»ú£¬¿ªÊ¼/ÔÝÍ£°´Å¥ //
@@ -254,6 +267,7 @@ draw_senceII(HDC hdcMem, HDC hdcTmp, HBITMAP *hbBmp,
 	//»­×Óµ¯
 	draw_bullet(bullet_link, hdcTmp, hdcMem);
 }
+
 VOID
 draw_senceIII(HDC hdcMem, HDC hdcTmp, HBITMAP *hbBmp, BITMAP bmp, GAME *s_game) {// »­³¡¾°Èý£¬°üÀ¨·ÖÊý¿ò£¬·ÖÊý£¬ÍË³ö°´Å¥£¬ÖØÐÂ¿ªÊ¼°´Å¥ //
 	LOGFONT lf;
@@ -296,6 +310,7 @@ draw_senceIII(HDC hdcMem, HDC hdcTmp, HBITMAP *hbBmp, BITMAP bmp, GAME *s_game) 
 	SetBkMode(hdcMem, TRANSPARENT);
 	DrawText(hdcMem, strScore, -1, &rt, DT_CENTER);
 }
+
 
 /*
 message eventÄ£¿é£º
@@ -348,6 +363,7 @@ proc_lButtondown(HWND hwnd, LPARAM lParam, BULLET_LINK *bullet_link,
 		break;
 	}
 }
+
 BOOL
 check_button_start(POINT ptMouse, HBITMAP *hbBmp) {// ¼ì²â¿ªÊ¼°´Å¥ÊÇ·ñ±»°´ÏÂ£¬ÈçÊÇ£¬·µ»ØTRUE //
 	RECT rect;
@@ -359,6 +375,7 @@ check_button_start(POINT ptMouse, HBITMAP *hbBmp) {// ¼ì²â¿ªÊ¼°´Å¥ÊÇ·ñ±»°´ÏÂ£¬Èç
 	rect.bottom = bmp.bmHeight + rect.top;
 	return PtInRect(&rect, ptMouse);
 }
+
 BOOL
 check_button_restart(POINT ptMouse, HBITMAP *hbBmp) {// ¼ì²âÖØÐÂ¿ªÊ¼°´Å¥ÊÇ·ñ±»°´ÏÂ£¬ÈçÊÇ£¬·µ»ØTRUE //
 	RECT rect;
@@ -370,6 +387,7 @@ check_button_restart(POINT ptMouse, HBITMAP *hbBmp) {// ¼ì²âÖØÐÂ¿ªÊ¼°´Å¥ÊÇ·ñ±»°´
 	rect.bottom = rect.top + bmp.bmHeight;
 	return PtInRect(&rect, ptMouse);
 }
+
 BOOL
 check_button_exit(POINT ptMouse, HBITMAP *hbBmp) {// ¼ì²âÍË³ö°´Å¥ÊÇ·ñ±»°´ÏÂ£¬ÈçÊÇ£¬·µ»ØTRUE //
 	RECT rect;
@@ -381,6 +399,7 @@ check_button_exit(POINT ptMouse, HBITMAP *hbBmp) {// ¼ì²âÍË³ö°´Å¥ÊÇ·ñ±»°´ÏÂ£¬ÈçÊ
 	rect.bottom = rect.top + bmp.bmHeight;
 	return PtInRect(&rect, ptMouse);
 }
+
 BOOL
 check_button_pause_play(POINT ptMouse, HBITMAP *hbBmp) {// ¼ì²âÔÝÍ£/¿ªÊ¼°´Å¥ÇøÓòÊÇ·ñ±»°´ÏÂ£¬ÈçÊÇ£¬·µ»ØTRUE //
 	RECT rect;
@@ -392,6 +411,7 @@ check_button_pause_play(POINT ptMouse, HBITMAP *hbBmp) {// ¼ì²âÔÝÍ£/¿ªÊ¼°´Å¥ÇøÓò
 	rect.bottom = rect.top + bmp.bmHeight / 2;
 	return PtInRect(&rect, ptMouse);
 }
+
 BOOL
 check_button_sound_on_off(POINT ptMouse, HBITMAP *hbBmp) {// ¼ì²âÉùÒô°´Å¥ÊÇ·ñ±»°´ÏÂ //
 	RECT rect;
@@ -403,6 +423,7 @@ check_button_sound_on_off(POINT ptMouse, HBITMAP *hbBmp) {// ¼ì²âÉùÒô°´Å¥ÊÇ·ñ±»°
 	rect.bottom = rect.top + bmp.bmHeight;
 	return PtInRect(&rect, ptMouse);
 }
+
 VOID
 proc_timer(HWND hwnd, BULLET_LINK *bullet_link, MYPLANE *myplane,
 	PLANE *planes, GAME *s_game, HBITMAP *hbBmp) {// Timer¼ÆÊ±Æ÷Ëù´¥·¢µÄÊÂ¼þ£¬
@@ -441,6 +462,7 @@ proc_timer(HWND hwnd, BULLET_LINK *bullet_link, MYPLANE *myplane,
 
 	InvalidateRect(hwnd, NULL, TRUE);
 }
+
 
 /*
 enimeÄ£¿é
@@ -506,6 +528,7 @@ update_plane_info(BOOL bReset, UINT pIndex, PLANE *planes, GAME *s_game) { // ¸ü
 		}
 	}
 }
+
 VOID
 check_plane_info(PLANE *planes, GAME *s_game) { // ¼ì²é·É»úÐÅÏ¢£¬Èç¹û·É»ú±»»÷ÊýµÈÓÚ×î´óÉúÃü£¬update_plane_info //
 	for (UINT i = 0; i < s_game->g_plNum; i++) {
@@ -528,6 +551,7 @@ check_plane_info(PLANE *planes, GAME *s_game) { // ¼ì²é·É»úÐÅÏ¢£¬Èç¹û·É»ú±»»÷Êýµ
 		}
 	}
 }
+
 VOID
 check_plane_pos(PLANE *planes, GAME *s_game) {// ¼ì²é·É»úÎ»ÖÃ£¬Èç¹û·É»úµ½´ïÆÁÄ»µ×²¿£¬update_plane_info //
 	for (UINT i = 0; i < s_game->g_plNum; i++) {
@@ -538,10 +562,12 @@ check_plane_pos(PLANE *planes, GAME *s_game) {// ¼ì²é·É»úÎ»ÖÃ£¬Èç¹û·É»úµ½´ïÆÁÄ»µ
 		}
 	}
 }
+
 VOID
 free_planes(PLANE *planes) {// ÊÍ·Åplanes×ÊÔ´ //
 	free(planes);
 }
+
 
 /*
 soundÄ£¿é£º
@@ -578,6 +604,7 @@ play_backsound(GAME *s_game) {// ²¥·Å±³¾°ÒôÀÖ //
 	}
 }
 
+
 /*
 myplaneÄ£¿é£º
 */
@@ -606,6 +633,7 @@ move_myplane(WPARAM wParam, HWND hWnd, MYPLANE *myplane, GAME *s_game) {// Íæ¼Ò¿
 	}
 	//SendMessage(hWnd, WM_PAINT, 0, 0);
 }
+
 BOOL
 check_myplane_crash(MYPLANE *myplane, PLANE *planes, GAME *s_game) {// ¼ì²éµÐ»úºÍÍæ¼Ò·É»úÊÇ·ñÏà×² //
 	POINT pt;
@@ -624,11 +652,13 @@ check_myplane_crash(MYPLANE *myplane, PLANE *planes, GAME *s_game) {// ¼ì²éµÐ»úº
 	}
 	return FALSE;
 }
+
 VOID
 free_myplane(MYPLANE *myplane) {
 	free(myplane);
 	myplane = NULL;
 }
+
 
 /*
 bulletÄ£¿é£º
@@ -656,6 +686,7 @@ create_bullet(BULLET_LINK *bullet_link, MYPLANE *myplane, HBITMAP *hbBmp) {// Éú
 	newBullet->pre = bullet_link->tail;
 	bullet_link->tail = newBullet;
 }
+
 VOID
 draw_bullet(BULLET_LINK *bullet_link, HDC hdcTmp, HDC hdcMem) {// »­³ö×Óµ¯ //
 	BULLET *p = bullet_link->head;
@@ -669,6 +700,7 @@ draw_bullet(BULLET_LINK *bullet_link, HDC hdcTmp, HDC hdcMem) {// »­³ö×Óµ¯ //
 		p = p->next;
 	}
 }
+
 VOID
 move_bullet(BULLET_LINK *bullet_link) {// ×Óµ¯ÒÆ¶¯ //
 	BULLET *p = bullet_link->head;
@@ -677,6 +709,7 @@ move_bullet(BULLET_LINK *bullet_link) {// ×Óµ¯ÒÆ¶¯ //
 		p = p->next;
 	}
 }
+
 BULLET*
 check_bullet_pos(BULLET_LINK *bullet_link) {// ÒòÎªÔÚheadÎ»µÄ×Óµ¯Ò»¶¨ÊÇÔÚ×îÇ°Ãæ£¬¹Ê¼ì²éheadÎ»¼´¿É£¬³ö½ç·µ»Ø³ö½ç·É»úµÄµØÖ· //
 	if (bullet_link->head == NULL) {
@@ -687,6 +720,7 @@ check_bullet_pos(BULLET_LINK *bullet_link) {// ÒòÎªÔÚheadÎ»µÄ×Óµ¯Ò»¶¨ÊÇÔÚ×îÇ°Ãæ£
 	}
 	return NULL;
 }
+
 BULLET*
 check_bullet_info(BULLET_LINK *bullet_link, PLANE *planes, GAME *s_game) {// ÅÐ¶Ï×Óµ¯ÊÇ·ñ»÷ÖÐµÐ»ú ÏÖÔÚ¾Í²»ÄÜÖ»¼ì²éheadÎ»µÄ×Óµ¯ÁË //
 	BULLET *p = bullet_link->head;
@@ -713,6 +747,7 @@ check_bullet_info(BULLET_LINK *bullet_link, PLANE *planes, GAME *s_game) {// ÅÐ¶
 	}
 	return NULL;
 }
+
 VOID
 free_bullet(BULLET_LINK *bullet_link, BULLET *bul) {
 	if (bullet_link->head == bullet_link->tail) {
@@ -746,6 +781,7 @@ free_bullet(BULLET_LINK *bullet_link, BULLET *bul) {
 	free(bul);
 	bul = NULL;
 }
+
 VOID
 free_allBullet(BULLET_LINK *bullet_link) {// ÖØÐÂ¿ªÊ¼ÓÎÏ·Ê±£¬ÊÍ·ÅËùÓÐ×Óµ¯×ÊÔ´ //
 	BULLET *p = bullet_link->head;
