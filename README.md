@@ -5,19 +5,19 @@
   
   ---  
   
-### profile
+### `profile`
 A classic game writed in `C` uses the `win32 API`.  
 Controls the aircraft, fires bullets, and destroys enemy aircraft.  
     
    
-### Current version
+### `Current version`
 ver 2.0 :   
 Added a player to control the aircraft.  
 Added background animation effect.  
 Added pause function, background music control function.  
   
   
-### The graphics
+### `The graphics`
 ![image](https://github.com/Joezeo/planeswar/blob/master/gif/GIF.gif)
 
 
